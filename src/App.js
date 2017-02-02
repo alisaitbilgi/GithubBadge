@@ -4,7 +4,7 @@ import ProcessorApi from './ProcessorApi';
 import store from './Store';
 import I from "immutable";
 
-const forkImage = require("/Users/alibilgi/Desktop/projects/GithubBadge/public/styles/images/fork.png");
+const forkImage = require("/Users/alibilgi/Desktop/GithubBadge/public/styles/images/fork.png");
 
 class App extends Component {
 

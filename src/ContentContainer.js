@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import I from "immutable";
 
-const smallImage = require("/Users/alibilgi/Desktop/projects/GithubBadge/public/styles/images/small.png");
+const smallImage = require("/Users/alibilgi/Desktop/GithubBadge/public/styles/images/small.png");
 
 // Initial response objects
 let repos = [{}];
