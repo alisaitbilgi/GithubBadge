@@ -1,14 +1,11 @@
 import React, {Component} from "react";
 import I from "immutable";
+import smallImage from "../../public/styles/images/small.png";
 
-
-const smallImage = require("/Users/alibilgi/Desktop/GithubBadge/public/styles/images/small.png");
 
 // Initial response objects
-let repos = [{}];
-let users = {
-  message: ""
-};
+let repos;
+let users;
 
 class ContentContainer extends Component {
 
@@ -16,7 +13,7 @@ class ContentContainer extends Component {
   render() {
 
     if (!I.List.isList(this.props.responseData)) {
-      repos = JSON.parse(this.props.responseData[0]);
+      repos = JSON.parse(this.props.responseData[0])[0];
       users = JSON.parse(this.props.responseData[1]);
     } else {
       repos = [{}];
@@ -30,11 +27,11 @@ class ContentContainer extends Component {
             <div className="col1">
                 <div className="row_of_col1">
                     <a href={users.html_url || "https://github.com/404"}>
-                        <img src={users.avatar_url || "https://avatars2.githubusercontent.com/u/5779565?v=3&s=88"} alt="empty" />
+                        <img src={users.avatar_url || "https://avatars2.githubusercontent.com/u/5779565?v=3&s=88"} alt="avatar" />
                     </a>
                 </div>
                 <div className="row_of_col1" />
-                <div className="row_of_col1"><img src={smallImage} alt="empty"/></div>
+                <div className="row_of_col1"><img src={smallImage} alt="git-ninja"/></div>
             </div>
             <div className="col2">
                 <div className="row_of_col2">
@@ -46,7 +43,7 @@ class ContentContainer extends Component {
                 </div>
                 <div className="row_of_col2">
                     <span className="topOnes">
-                        {repos[0] ? repos[0].name : "no recent repo activity"} {repos[0] ? "(" + repos[0].language + ")" : ""}
+                        {repos ? repos.name : "no recent repo activity"} {repos ? "(" + repos.language + ")" : ""}
                     </span>
                 </div>
                 <div className="row_of_col2">
@@ -54,8 +51,8 @@ class ContentContainer extends Component {
                     <span className="leftOnes"><b>{users.public_repos || 0}</b>  Repos</span>
                 </div>
                 <div className="row_of_col2">
-                    <span className="leftOnes"><b>{repos[0] ? repos[0].forks_count : 0}</b> Forks</span>
-                    <span className="rightOnes"><b>{repos[0] ? repos[0].stargazers_count : 0}</b> Stargazers</span>
+                    <span className="leftOnes"><b>{repos ? repos.forks_count : 0}</b> Forks</span>
+                    <span className="rightOnes"><b>{repos ? repos.stargazers_count : 0}</b> Stargazers</span>
                 </div>
             </div>
         </div>

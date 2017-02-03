@@ -80,7 +80,7 @@
     "yoda": [2, "never"],
     "no-extra-parens": 0,
     "block-scoped-var": 2,
-    "complexity": [2, 10],
+    "complexity": [2, 20],
     "default-case": 2,
     "dot-location": [2, "property"],
     "guard-for-in": 2,

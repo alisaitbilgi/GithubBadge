@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import {debounce} from "throttle-debounce";
 import {connect} from "react-redux";
-// import {addUserName} from "../actions/addUsername";
 import {setResponse} from "../actions/setResponse";
 import {Request} from "projects/javascript/Request.js";
 import ContentPresenter from "../components/ContentPresenter";
@@ -9,12 +8,13 @@ import I from "immutable";
 
 
 function mainApi(input = "nzakas") {
-  let url = [];
-  url[0] = `https://api.github.com/users/${input}/repos`;
-  url[1] = `https://api.github.com/users/${input}`;
+  let url = {
+    repos: `https://api.github.com/users/${input}/repos`,
+    users: `https://api.github.com/users/${input}`
+  };
 
   // "Request.get" method is coming from my generic XMLHttpRequest file on node_modules.
-  return Promise.all([Request.get(url[0]), Request.get(url[1])]);
+  return Promise.all([Request.get(url.repos), Request.get(url.users)]);
 }
 
 export class FormContainer extends Component {
@@ -26,7 +26,7 @@ export class FormContainer extends Component {
 
   componentWillMount() {
     this.callSubmit();
-    this.callSubmit = debounce(600, this.callSubmit);
+    this.callSubmit = debounce(520, this.callSubmit);
   }
 
   handleSubmit(evt) {
