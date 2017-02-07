@@ -1,9 +1,9 @@
 import React, {Component} from "react";
-import FormContainer from "./FormContainer";
+import FormContainer from "./HomeContainer";
 import forkImage from "../../public/styles/images/fork.png";
 
 
-class App extends Component {
+export default class App extends Component {
 
   render() {
     return (
@@ -12,7 +12,7 @@ class App extends Component {
                 <FormContainer/>
             </article>
             <nav>
-                <a href={"https://github.com/alisaitbilgi"}>
+                <a href={"https://github.com/alisaitbilgi/GithubBadge-React-Redux"}>
                     <img className="forkImage" alt="fork-me" src={forkImage} />
                 </a>
             </nav>
@@ -22,4 +22,3 @@ class App extends Component {
   }
 }
 
-export default App;
