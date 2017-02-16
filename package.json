@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "eslint": "^3.15.0",
     "genericxhr": "^1.0.0",
     "jasmine-core": "^2.5.2",
@@ -16,7 +17,13 @@
 =======
     "eslint": "^3.15.0",
 >>>>>>> master
+||||||| merged common ancestors
+    "eslint": "^3.14.1",
+=======
+    "eslint": "^3.15.0",
+>>>>>>> cefce5133a5783ddd6e9563fbbfd252a9fcbbc98
     "react-scripts": "0.8.2",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "react-sparklines": "^1.6.0",
 ||||||| merged common ancestors
@@ -25,6 +32,14 @@
     "react-sparklines": "^1.6.0",
 >>>>>>> master
     "redux-devtools": "^3.3.1"
+||||||| merged common ancestors
+    "redux-devtools": "^3.3.1"
+=======
+    "react-sparkline": "^2.0.0",
+    "react-sparklines": "^1.6.0",
+    "redux-devtools": "^3.3.1",
+    "genericxhr": "^1.0.0"
+>>>>>>> cefce5133a5783ddd6e9563fbbfd252a9fcbbc98
   },
   "dependencies": {
     "history": "^4.5.1",
