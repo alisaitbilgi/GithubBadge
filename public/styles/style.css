@@ -1,16 +1,50 @@
 body {
+<<<<<<< HEAD
     background: radial-gradient(aliceblue 13%, linen 80%);
+||||||| merged common ancestors
+    font: 24px Helvetica;
+    background-image: url(images/img.jpeg);
+    background-size: contain;
+    height: 970px;
+=======
+    font: 24px Helvetica;
+    background: radial-gradient(aliceblue 13%, linen 80%);
+    background-size: cover;
+    height: 970px;
+>>>>>>> master
     margin: 0;
     padding: 0;
 }
+<<<<<<< HEAD
 
 footer {
     text-align: center;
 }
 
+||||||| merged common ancestors
+=======
+
+footer{
+    text-align: center;
+    margin: 4px;
+    padding: 5px;
+    min-height: 40px;
+}
+
+>>>>>>> master
 .main {
+<<<<<<< HEAD
     margin: 0;
     padding: 0;
+||||||| merged common ancestors
+    min-height: 800px;
+    margin: 0px;
+    padding: 0px;
+=======
+    min-height: 800px;
+    margin: 0;
+    padding: 0;
+>>>>>>> master
     display: flex;
     flex-flow: row;
     height: 100vh;
@@ -41,6 +75,7 @@ footer {
     min-height: 490px;
 }
 
+<<<<<<< HEAD
 .badge-side {
     min-width: 350px;
     flex: 1;
@@ -60,10 +95,41 @@ footer {
     max-width: 195px;
 }
 
+||||||| merged common ancestors
+
+=======
+>>>>>>> master
 .content {
+    width: 267px;
+    height: 155px;
+    padding: 0;
+    display: flex;
+    flex-flow: row;
+    margin: 210px 10px 10px 0;
+    border:none;
+}
+
+.styleOfIframe {
     width: 260px;
+<<<<<<< HEAD
     height: 150px;
     border:none;
+||||||| merged common ancestors
+    height: 146px;
+    border: 1px solid lightgrey;
+    display: flex;
+    flex-flow: row;
+    margin: 210px 10px 10px 0px;
+    border-radius: 4px;
+    background-image: url(images/img.jpeg);
+=======
+    height: 146px;
+    border: 1px solid lightgrey;
+    display: flex;
+    flex-flow: row;
+    border-radius: 10px;
+    background: radial-gradient(aliceblue 88%, ghostwhite 12%);
+>>>>>>> master
 }
 
 .image-side {
@@ -82,7 +148,65 @@ footer {
     min-width: 332px;
 }
 
+<<<<<<< HEAD
 .form-container {
+||||||| merged common ancestors
+.row_of_col1 {
+    display:block;
+    flex-grow:1;
+    width:55px;
+    max-height: 46px;
+    color: #4c4a37;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
+    line-height: 32px;
+    padding: 1px;
+}
+
+.row_of_col2 {
+    display:block;
+    flex-grow:1;
+    width:200px;
+    max-height: 35px;
+    color: #4c4a37;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 13px;
+    line-height: 32px;
+}
+
+.formContainerDiv {
+    width: 68%;
+    max-height: 90px;
+    min-height: 50px;
+=======
+.row_of_col1 {
+    display:block;
+    flex-grow:1;
+    width:55px;
+    max-height: 46px;
+    background-color: lightcyan;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
+    line-height: 56px;
+    padding: 1px;
+}
+
+.row_of_col2 {
+    display:block;
+    flex-grow:1;
+    width:200px;
+    max-height: 35px;
+    color: #4c4a37;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 13px;
+    line-height: 32px;
+}
+
+.formContainerDiv {
+    width: 68%;
+    max-height: 90px;
+    min-height: 50px;
+>>>>>>> master
     display: flex;
     justify-content: center;
     border-radius: 22px;
@@ -106,6 +230,7 @@ footer {
     border: 2px solid #B5B5B5;
 }
 
+<<<<<<< HEAD
 .row {
     display: flex;
     flex-grow: 1;
@@ -117,6 +242,21 @@ footer {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+||||||| merged common ancestors
+img {
+    max-height: 50px;
+    max-width: 50px;
+    font-size: 16px;
+}
+
+.leftOnes {
+    float: left;
+    padding-left: 10px;
+=======
+.leftOnes {
+    float: left;
+    padding-left: 10px;
+>>>>>>> master
 }
 
 .column-5 {
@@ -126,6 +266,7 @@ footer {
     flex-basis: 50%;
 }
 
+<<<<<<< HEAD
 .styleOfIframe {
     border-radius: 10px;
     background: radial-gradient(aliceblue 88%, ghostwhite 12%);
@@ -136,26 +277,94 @@ footer {
     padding: 0;
     display: flex;
     flex-direction: row;
+||||||| merged common ancestors
+.topOnes {
+    padding-left: 5px;
+    vertical-align: text-bottom;
+    font-size: 13px;
+=======
+.topOnes {
+    padding-left: 4px;
+    vertical-align: text-bottom;
+    font-size: 13px;
+>>>>>>> master
 }
 
+<<<<<<< HEAD
 .svg-wrapper {
     width: 100%;
     max-height: 47px;
     max-width: 45px;
+||||||| merged common ancestors
+span {
+    color: #323231;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 32px;
+=======
+.centered {
+    margin: 0 auto;
+    padding-top: 20%;
+    font-size: 20px;
 }
 
+
+
+span {
+    color: #323231;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 32px;
+>>>>>>> master
+}
+
+<<<<<<< HEAD
 .bold-item {
     font-weight: 900;
     font-size: 1.1rem;
-    color: black;
+||||||| merged common ancestors
+b {
+=======
+img {
+    max-height: 50px;
+    max-width: 50px;
+    border-radius: 7px;
 }
 
+b {
+>>>>>>> master
+    color: black;
+<<<<<<< HEAD
+||||||| merged common ancestors
+    font-size: 15px;
+    padding-right: 2px;
+=======
+    font-size: 14px;
+    padding-right: 2px;
+>>>>>>> master
+}
+
+<<<<<<< HEAD
 .text-item {
     font-family: "Times New Roman", sans-serif;
     font-size: 0.9rem;
     color: slategrey;
+||||||| merged common ancestors
+a {
+    font-size: 15px;
+    text-decoration: none;
+    color:#008080;
+=======
+a {
+    font-size: 15px;
+    text-decoration: none;
+    color:#4c68d7;
+>>>>>>> master
 }
 
+<<<<<<< HEAD
 @media only screen and (max-device-width: 768px) {
 
     .main {
@@ -290,4 +499,21 @@ footer {
     font-family: "Times New Roman", sans-serif;
     font-size: 0.9rem;
     color: black;
+||||||| merged common ancestors
+a:hover {
+    font-size: 15px;
+    text-decoration: underline;
+=======
+a:hover {
+    text-decoration: underline;
+}
+
+svg {
+    max-height: 53px;
+    max-width: 49px;
+}
+
+p {
+    font-size: 8px;
+>>>>>>> master
 }

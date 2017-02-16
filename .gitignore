@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 /.DS_Store
+||||||| merged common ancestors
+
+=======
+.DS_Store
+>>>>>>> master
 /node_modules/
 /.idea
 /build/

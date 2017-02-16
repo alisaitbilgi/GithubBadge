@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+<<<<<<< HEAD
     "eslint": "^3.15.0",
     "genericxhr": "^1.0.0",
     "jasmine-core": "^2.5.2",
@@ -10,8 +11,19 @@
     "karma-chrome-launcher": "^2.0.0",
     "karma-jasmine": "^1.1.0",
     "lodash.debounce": "^4.0.8",
+||||||| merged common ancestors
+    "eslint": "^3.14.1",
+=======
+    "eslint": "^3.15.0",
+>>>>>>> master
     "react-scripts": "0.8.2",
+<<<<<<< HEAD
     "react-sparklines": "^1.6.0",
+||||||| merged common ancestors
+=======
+    "react-sparkline": "^2.0.0",
+    "react-sparklines": "^1.6.0",
+>>>>>>> master
     "redux-devtools": "^3.3.1"
   },
   "dependencies": {
