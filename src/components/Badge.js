@@ -19,19 +19,19 @@ export class Badge extends Component {
 
   render() {
 
-      length = this.props.badgeRepoInfo.length;
-      lastWeek.setDate((lastWeek.getDate()) - 7);
+    length = this.props.badgeRepoInfo.length;
+    lastWeek.setDate((lastWeek.getDate()) - 7);
 
-      for (let i = 0; i < length; i++) {
-        if (new Date(this.props.badgeRepoInfo[i].updated_at).getTime() > lastWeek.getTime()) {
-          values.push(this.props.badgeRepoInfo[i].size);
-        } else {
-          values.push(0);
-        }
+    for (let i = 0; i < length; i++) {
+      if (new Date(this.props.badgeRepoInfo[i].updated_at).getTime() > lastWeek.getTime()) {
+        values.push(this.props.badgeRepoInfo[i].size);
+      } else {
+        values.push(0);
       }
+    }
 
-      repos = this.props.badgeRepoInfo[0];
-      users = this.props.badgeUserInfo;
+    repos = this.props.badgeRepoInfo[0];
+    users = this.props.badgeUserInfo;
 
 
     return (
