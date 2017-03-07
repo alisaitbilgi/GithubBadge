@@ -6,11 +6,10 @@ let stub;
 
 describe("routeCallback", function() {
   describe("function", function() {
-    beforeEach(() => {
+    before(() => {
       server = sinon.fakeServer.create();
-
     });
-    afterEach(() => {
+    after(() => {
       server.restore();
     });
 
