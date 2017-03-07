@@ -1,4 +1,3 @@
-/* eslint-disable */
 import {setTempUserName} from "../../../src/actions/setTempUserName";
 import thunk from "redux-thunk";
 import configureMockStore from "redux-mock-store";

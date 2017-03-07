@@ -1,4 +1,3 @@
-/* eslint-disable */
 import reducer from "../../../src/reducers/singleReducer";
 import I from "immutable";
 
