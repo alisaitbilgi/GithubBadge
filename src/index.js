@@ -6,18 +6,20 @@ import Badge from "./components/Badge";
 import Profile from "./components/Profile";
 import {Provider} from "react-redux";
 import {Router, Route, IndexRoute, browserHistory} from "react-router";
-import {store} from "./store/configStore";
 import {routeCallback} from "./routeCallback";
+import configStore from "./store/configStore";
 
-ReactDOM.render(
+const store = configStore();
+
+ReactDOM.render((
     <Provider store={store}>
         <Router history={browserHistory}>
             <Route path="/" component={NavigationBar}>
                 <IndexRoute component={App} />
                 <Route path="profile" component={Profile} />
             </Route>
-            <Route path="users(/:username)" onEnter={routeCallback} component={Badge} />
+            <Route path="users(/:username)" onEnter={routeCallback(store)} component={Badge} />
         </Router>
     </Provider>
-  , document.getElementById("root")
+  ), document.getElementById("root")
 );

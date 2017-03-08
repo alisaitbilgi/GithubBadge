@@ -1,3 +1,4 @@
+/* eslint-disable */
 import I from "immutable";
 export default function singleReducer(state = I.Map(), action) {
   switch (action.type) {

@@ -1,12 +1,13 @@
 import {mount} from "enzyme";
 import {Form} from "../../src/components/Form";
-import {store} from "../../src/store/configStore";
+import configStore from "../../src/store/configStore";
 
+const store = configStore();
 let wrapper;
 
 describe("Form component", function() {
   before(function() {
-    wrapper = mount(Form({username: "ali"}));
+    wrapper = mount(Form({username: "ali", dispatch: store.dispatch}));
   });
 
   it("should update the store with a username", function() {

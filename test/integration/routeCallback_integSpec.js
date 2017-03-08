@@ -1,6 +1,7 @@
-import {store} from "../../src/store/configStore";
 import {routeCallback} from "../../src/routeCallback";
+import configStore from "../../src/store/configStore";
 
+const store = configStore();
 let server;
 let stub;
 
@@ -17,7 +18,7 @@ describe("routeCallback", function() {
       server.respondWith([200, {"Content-Type": "application/json"},
         '[{"updated_at":1487774712694 , "id": 12, "comment": "Hey there" }]'
       ]);
-      const testResult = routeCallback({params: {username: "addy"}})
+      const testResult = routeCallback(store)({params: {username: "addy"}})
         .then(() => {
           expect(store.getState().get("badgeRepoInfo")).to.deep.equal({updated_at: 1487774712694, id: 12, comment: 'Hey there'});
         });
@@ -29,7 +30,7 @@ describe("routeCallback", function() {
       server.respondWith([403, {"Content-Type": "application/json"},
         '[{"updated_at":1487774712694 , "id": 12, "comment": "Hey there" }]'
       ]);
-      const testResult = routeCallback({params: {username: "addy"}})
+      const testResult = routeCallback(store)({params: {username: "addy"}})
         .then(() => {
           expect(store.getState().get("badgeUserInfo")).to.deep.equal({
             login: "API rate limit exceeded",
@@ -44,7 +45,7 @@ describe("routeCallback", function() {
       server.respondWith([200, {"Content-Type": "application/json"},
         '[{"updated_at":1487774712694 , "id": 12, "comment": "Hey there" }]'
       ]);
-      const testResult = routeCallback({params: {username: "addy"}})
+      const testResult = routeCallback(store)({params: {username: "addy"}})
         .then(() => {
           expect(store.getState().get("badgeUserInfo")[0]).to.deep.equal({updated_at: 1487774712694, id: 12, comment: 'Hey there'});
         });
@@ -56,7 +57,7 @@ describe("routeCallback", function() {
       server.respondWith([404, {"Content-Type": "application/json"},
         '[{"updated_at":1487774712694 , "id": 12, "comment": "Hey there" }]'
       ]);
-      const testResult = routeCallback({params: {username: "addy"}})
+      const testResult = routeCallback(store)({params: {username: "addy"}})
         .then(() => {
           expect(store.getState().get("badgeRepoInfo")[0]).to.deep.equal({updated_at: 1487774712694, id: 12, comment: 'Hey there'});
         });
@@ -76,7 +77,7 @@ describe("routeCallback", function() {
     });
 
     it("should update store with setErrorMessage when fetching is done with a Server Error!", () => {
-      return routeCallback({params: {username: "addy"}})
+      return routeCallback(store)({params: {username: "addy"}})
         .then(res => {
           expect(store.getState().get("errorMessage")).to.deep.equal(new Error());
         });

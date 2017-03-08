@@ -10,5 +10,3 @@ export default function configStore(initialState) {
     applyMiddleware(thunk)
   );
 }
-
-export let store = configStore();
