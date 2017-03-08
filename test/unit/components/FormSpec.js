@@ -3,6 +3,7 @@ import {shallow} from "enzyme";
 import {Form} from "../../../src/components/Form";
 import configStore from "../../../src/store/configStore";
 const store = configStore();
+
 const spy = sinon.spy(store, "dispatch");
 
 describe("'Form' component", function() {
