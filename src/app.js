@@ -9,21 +9,19 @@ import {Router, Route, IndexRoute, browserHistory} from "react-router";
 import {routeCallback} from "./routeCallback";
 import configStore from "./store/configStore";
 
-export default function () {
+export default function() {
   const store = configStore();
-
   const app = ReactDOM.render((
-      <Provider store={store}>
-        <Router history={browserHistory}>
-          <Route path="/" component={NavigationBar}>
-            <IndexRoute component={App}/>
-            <Route path="profile" component={Profile}/>
-          </Route>
-          <Route path="users(/:username)" onEnter={routeCallback(store)} component={Badge}/>
-        </Router>
-      </Provider>
+    <Provider store={store}>
+      <Router history={browserHistory}>
+        <Route path="/" component={NavigationBar}>
+          <IndexRoute component={App}/>
+          <Route path="profile" component={Profile}/>
+        </Route>
+        <Route path="users(/:username)" store={store} onEnter={routeCallback} component={Badge}/>
+      </Router>
+    </Provider>
     ), document.getElementById("root")
   );
-
   return {app, store};
 }
